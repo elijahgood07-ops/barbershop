@@ -1,1 +1,36 @@
 @use "../base/var" as*;
+
+.service{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-image: url(../../img/service-bg.jpg);
+
+          &__write{
+font-weight: 600;
+font-size: 11px;
+text-transform: uppercase;
+color: $title_color;
+    padding-bottom: 20px;
+    margin-top: 112px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &::before {
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: $title_color;
+      content: "";
+    }
+  }
+
+  &__title{
+font-weight: 700;
+font-size: 42px;
+letter-spacing: 0.05em;
+color: $main_color;
+  }
+
+  
+}
+

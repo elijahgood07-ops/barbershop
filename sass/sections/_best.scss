@@ -1,1 +1,126 @@
 @use "../base/var" as*;
+
+.best{
+    padding-top: 84px;
+    padding-bottom: 84px;
+    background-color: $main_color;
+
+         @media screen and (min-width: 720px) {
+          padding-top: 100px;
+          padding-bottom: 100px;
+        }
+         @media screen and (min-width: 1200px) {
+          padding-top: 120px;
+          padding-bottom: 120px;
+        }
+
+    & .container{
+         @media screen and (min-width: 720px) {
+        display: flex;
+        gap: 30px;
+        }
+    }
+
+&__box{
+        @media screen and (min-width: 720px) {
+          width: 470px;
+}
+}
+    &__wrap{
+ display: none;
+
+      @media screen and (min-width: 720px) {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        }
+         @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        }
+    }
+
+    &__img{
+     width: 330px;
+    height: 235px;
+             @media screen and (min-width: 1200px) {
+        width: 270px;
+height: 445px;
+        }
+    }
+
+      &__text {
+font-weight: 600;
+font-size: 11px;
+text-transform: uppercase;
+color: $title_color;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &::before {
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: $before-color;
+      content: "";
+    }
+  }
+
+  &__title{
+font-weight: 700;
+font-size: 28px;
+letter-spacing: 0.05em;
+color: #303030;
+margin-bottom: 20px;
+width: 306px;
+
+      @media screen and (min-width: 1200px) { 
+font-weight: 700;
+font-size: 42px;
+width: 470px;
+        }
+  }
+
+  &__paragrf{
+font-weight: 400;
+font-size: 16px;
+line-height: 163%;
+letter-spacing: 0.02em;
+color: #555;
+margin-bottom: 20px;
+
+    @media screen and (min-width: 720px) {
+        font-size: 18px;
+        }
+  }
+
+  &__write{
+font-weight: 400;
+font-size: 14px;
+line-height: 186%;
+letter-spacing: 0.02em;
+color: #555;
+margin-bottom: 40px;
+
+      @media screen and (min-width: 720px) { 
+        margin-bottom: 72px;
+        }
+
+      @media screen and (min-width: 1200px) { 
+margin-bottom: 47px;
+        }
+
+}
+
+  &__btn{
+font-weight: 600;
+font-size: 12px;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+border: 1px solid #ff6c00;
+border-radius: 25px;
+width: 160px;
+height: 40px;
+background-color: transparent;
+  }
+}
