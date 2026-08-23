@@ -1,17 +1,27 @@
-@use "../base/var" as*;
+@use "../base/var" as *;
 
-.service{
+.service {
+  padding-top: 84px;
+  padding-bottom: 84px;
+  background-image:
+    linear-gradient(#111319e2), url(../../img/service-bg.jpg);
+  // background: url(../../img/service-bg.jpg) lightgray -362.238px 0px / 250.933% 111.924% no-repeat;
+
+  @media screen and (min-width: 720px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media screen and (min-width: 1200px) {
     padding-top: 120px;
     padding-bottom: 120px;
-    background-image: url(../../img/service-bg.jpg);
+  }
 
-          &__write{
-font-weight: 600;
-font-size: 11px;
-text-transform: uppercase;
-color: $title_color;
-    padding-bottom: 20px;
-    margin-top: 112px;
+  &__write {
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: $main_color;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -19,18 +29,95 @@ color: $title_color;
       display: block;
       width: 60px;
       height: 1px;
-      background: $title_color;
+      background: $main_color;
       content: "";
     }
   }
 
-  &__title{
-font-weight: 700;
-font-size: 42px;
-letter-spacing: 0.05em;
-color: $main_color;
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 44px;
+    letter-spacing: 0.05em;
+    color: $main_color;
+    width: 100%;
+
+      @media screen and (min-width: 479px) {
+    width: 418px;
+  }
   }
 
-  
-}
+  @media screen and (min-width: 720px) {
+    font-size: 42px;
+  }
 
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 32px 27px 32px 40px;
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+
+      @media screen and (min-width: 1200px) {
+   flex-direction: row;
+        justify-content: space-between;
+        background-image: none;
+        padding: 0;
+  }
+  }
+
+  &__elem{
+          @media screen and (min-width: 1200px) {
+          padding: 30px 21px 30px 20px;
+          background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%); 
+  }
+  }
+
+  &__elem:nth-child(2){
+              @media screen and (min-width: 1200px) {
+                background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__inhold {
+    display: flex;
+    justify-content: space-between;
+
+          @media screen and (min-width: 1200px) {
+            width: 530px;
+  }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.02em;
+    color: $text_color;
+
+    @media screen and (min-width: 720px) {
+      font-size: 18px;
+    }
+  }
+    &__btn{
+font-weight: 600;
+font-size: 12px;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+border: 1px solid #ff6c00;
+border-radius: 25px;
+width: 160px;
+height: 40px;
+color: $main_color;
+background-color: transparent;
+display: block;
+margin: 0 auto;
+margin-top: 44px;
+  }
+}

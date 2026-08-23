@@ -1,1 +1,119 @@
 @use "../base/var" as*;
+
+.barbers{
+    padding-bottom: 90px;
+    padding-top: 78px;
+    background-color: $bg-color;
+
+        @media screen and (min-width: 720px) {
+            padding-top: 88px;
+            padding-bottom: 100px;
+    }
+            @media screen and (min-width: 1200px) {
+            padding-top: 120px;
+            padding-bottom: 120px;
+    }
+
+ &__text {
+font-weight: 600;
+font-size: 11px;
+text-transform: uppercase;
+color: $title_color;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 115px;
+    &::before {
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: $title-color;
+      content: "";
+    }
+
+      @media screen and (min-width: 1200px) {
+        margin-left: 0;
+    }
+  }
+
+  &__title{
+font-weight: 700;
+font-size: 42px;
+letter-spacing: 0.05em;
+color: #303030;
+
+        @media screen and (min-width: 720px) {
+          margin-bottom: 44px;
+          margin-left: 115px;
+    }
+                @media screen and (min-width: 1200px) {
+                  margin-left: 0;
+    }
+  }
+
+  &__img{
+        @media screen and (min-width: 720px) {
+          width: 450px;
+height: 346px;
+margin: 0 auto;
+    }
+  }
+
+  &__icon{
+    width: 20px;
+    height: 20px;
+    
+  }
+
+  &__name{
+font-weight: 400;
+font-size: 18px;
+letter-spacing: 0.02em;
+text-align: center;
+color: $title-color;
+margin-bottom: 8px;
+margin-top: 30px;
+  }
+
+  &__worker{
+font-weight: 400;
+font-size: 14px;
+letter-spacing: 0.02em;
+text-align: center;
+color: $accent_color;
+margin-bottom: 30px;
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+                @media screen and (min-width: 1200px) {
+                  flex-direction: row;
+    }
+  }
+
+  &__items{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  &__link{
+    width: 44px;
+    height: 44px;
+    background-color: $main_color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    &:hover{
+      fill: $accent_color;
+    }
+  }
+
+  
+}

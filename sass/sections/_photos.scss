@@ -1,1 +1,49 @@
 @use "../base/var" as*;
+
+.photos{
+    padding-top: 78px;
+    padding-bottom: 84px;
+
+          @media screen and (min-width: 720px) {
+        padding-top: 100px;
+        padding-bottom: 106px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+     &__text {
+font-weight: 600;
+font-size: 11px;
+text-transform: uppercase;
+color: $title_color;
+    margin-bottom: 71px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &::before {
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: $title-color;
+      content: "";
+    }
+    }
+
+    &__list{
+        display: grid;
+        gap: 30px;
+         @media screen and (min-width: 720px) {
+            grid-template-columns: repeat(2,1fr);
+    }
+             @media screen and (min-width: 1200px) {
+            grid-template-columns: repeat(4,1fr);
+    }
+    }
+
+    &__img{
+        width:  100%;
+    }
+
+}

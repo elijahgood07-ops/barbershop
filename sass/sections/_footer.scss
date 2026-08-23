@@ -1,1 +1,198 @@
-@use "../base/var" as*;
+@use "../base/var" as *;
+
+.footer {
+  padding-top: 84px;
+  padding-bottom: 84px;
+  background: $footer-bg;
+  background-image: url(../img/footer-bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  @media screen and (min-width: 720px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 130px;
+    padding-bottom: 120px;
+    background-position: right;
+    background-size: 50%;
+  }
+
+  & .container {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 42px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: $main-color;
+    margin-bottom: 44px;
+
+    @media screen and (min-width: 1200px) {
+      text-align: start;
+    }
+  }
+
+  &__boxed {
+    @media screen and (min-width: 720px) {
+      display: flex;
+      gap: 30px;
+    }
+  }
+
+  &__wraper {
+    display: flex;
+    gap: 44px;
+    flex-direction: column;
+
+    @media screen and (min-width: 720px) {
+      flex-direction: row;
+      gap: 130px;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-direction: column;
+      gap: 70px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $main-color;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $main-color;
+    background-color: transparent;
+    padding-bottom: 8px;
+    margin-bottom: 44px;
+
+    @media screen and (min-width: 479px) {
+      width: 418px;
+    }
+    @media screen and (min-width: 720px) {
+      width: 330px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
+  }
+
+  &__com {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.4);
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $main-color;
+    background-color: transparent;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 479px) {
+      width: 418px;
+    }
+    @media screen and (min-width: 720px) {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    border: 1px solid #ff6c00;
+    border-radius: 25px;
+    width: 160px;
+    height: 40px;
+    color: $main_color;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+    margin-top: 44px;
+    margin-bottom: 168px;
+
+    @media screen and (min-width: 720px) {
+      display: inline-block;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 42px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: $main-color;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 167%;
+    letter-spacing: 0.02em;
+    color: $text_color;
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width: 720px) {
+      width: 240px;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: $text_color;
+    margin-right: 16px;
+  }
+
+  &__box {
+    @media screen and (min-width: 1200px) {
+      padding-left: 100px;
+    }
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: $main_color;
+    margin-bottom: 20px;
+    margin-top: 44px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &::before {
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: $before-color;
+      content: "";
+    }
+
+    @media screen and (min-width: 720px) {
+      margin-top: 0;
+    }
+  }
+
+  &__paragrf {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 167%;
+    letter-spacing: 0.02em;
+    color: #9da4bd;
+  }
+}
