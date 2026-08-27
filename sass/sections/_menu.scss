@@ -20,6 +20,10 @@ opacity: 1;
     pointer-events: none;
 }
 
+.ishiden .menu{
+transform: scale(0.2) translateX(100%);
+}
+
 .menu{
 width: 337px;
 height: 100%;
@@ -27,6 +31,8 @@ box-shadow: -1px 0 3px 0 rgba(0, 0, 0, 0.16), -2px 0 4px 0 rgba(0, 0, 0, 0.08), 
 background: #fff;
 padding: 118px 99px 227px 40px;
 position: relative;
+transition-property: transform;
+transition-duration: 350ms;
 
 &__close{
     position: absolute;

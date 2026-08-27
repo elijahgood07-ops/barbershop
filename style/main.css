@@ -34,7 +34,6 @@ body {
 
 .container {
   max-width: 1200px;
-  outline: 1px solid red;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -164,6 +163,8 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  transition-property: fill;
+  transition-duration: 350ms;
 }
 .barbers__link:hover {
   fill: #ff6c00;
@@ -236,6 +237,8 @@ body {
   font-size: 11px;
   letter-spacing: 0.2em;
   color: #303030;
+  transition-property: color;
+  transition-duration: 350ms;
 }
 .header__sosialaside:hover {
   color: #ff6c00;
@@ -291,6 +294,8 @@ body {
   font-size: 12px;
   letter-spacing: 0.1em;
   color: #fff;
+  transition-property: color;
+  transition-duration: 350ms;
 }
 .header__link:hover {
   color: #ff6c00;
@@ -1029,6 +1034,57 @@ body {
   color: #9da4bd;
 }
 
+.basement {
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+@media screen and (min-width: 720px) {
+  .basement {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+.basement .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.basement__text {
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: #9da4bd;
+  margin-top: 40px;
+}
+@media screen and (min-width: 720px) {
+  .basement__text {
+    margin-top: 0;
+  }
+}
+.basement__list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.basement__list:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+}
+.basement__sosialaside {
+  color: #303030;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  transition-property: color;
+  transition-duration: 350ms;
+}
+.basement__sosialaside:hover {
+  color: #ff6c00;
+}
+
 .backdrop {
   position: fixed;
   width: 100%;
@@ -1047,6 +1103,10 @@ body {
   pointer-events: none;
 }
 
+.ishiden .menu {
+  transform: scale(0.2) translateX(100%);
+}
+
 .menu {
   width: 337px;
   height: 100%;
@@ -1054,6 +1114,8 @@ body {
   background: #fff;
   padding: 118px 99px 227px 40px;
   position: relative;
+  transition-property: transform;
+  transition-duration: 350ms;
 }
 .menu__close {
   position: absolute;

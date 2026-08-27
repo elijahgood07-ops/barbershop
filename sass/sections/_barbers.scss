@@ -109,7 +109,8 @@ margin-bottom: 30px;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-
+    transition-property: fill;
+    transition-duration: 350ms;
     &:hover{
       fill: $accent_color;
     }

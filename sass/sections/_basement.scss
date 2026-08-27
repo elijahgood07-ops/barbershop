@@ -1,0 +1,53 @@
+@use "../base/var" as *;
+.basement {
+  padding-top: 44px;
+  padding-bottom: 44px;
+
+  @media screen and (min-width: 720px) {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  & .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: $text-color;
+    margin-top: 40px;
+
+      @media screen and (min-width: 720px) {
+        margin-top: 0;
+  }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    &:before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 1px;
+      background-color: $title_color;
+    }
+  }
+
+  &__sosialaside {
+    color: $title-color;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    transition-property: color;
+    transition-duration: 350ms;
+            &:hover{
+        color: $accent-color;
+    }
+  }
+}

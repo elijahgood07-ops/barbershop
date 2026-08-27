@@ -69,6 +69,8 @@ font-weight: 600;
 font-size: 11px;
 letter-spacing: 0.2em;
 color: $title_color;
+transition-property: color;
+transition-duration: 350ms;
 &:hover{
   color: $accent_color;
 }
@@ -123,6 +125,8 @@ color: $title_color;
     font-size: 12px;
     letter-spacing: 0.1em;
     color: $main_color;
+    transition-property: color;
+    transition-duration: 350ms;
     &:hover {
       color: $accent_color;
     }
