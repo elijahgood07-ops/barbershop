@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
@@ -44,7 +45,7 @@
             <button class="header__btn" type="button">
               <img class="header__img" src="./img/menu.svg" alt="" />
             </button>
-            <ul class="header__list">
+            <ul data-aos="fade-down" class="header__list">
               <li class="header__item">
                 <a href="" class="header__link">About</a>
               </li>
@@ -90,12 +91,12 @@
       <section class="best">
         <div class="container">
           <div class="best__wrap">
-            <picture>
+            <picture data-aos="fade-up">
               <source srcset="./img/destope/destope-best@1x.webp 1x, ./img/destope/destope-best@2x.webp 2x" media="(min-width:1200px)">
               <source srcset="./img/tablet/tablet-best@1x.webp 1x, ./img/tablet/tablet-best@2x.webp 2x" media="(min-width:720px)">
                <img class="best__img" src="./img/shave.jpg" alt="" />
                   </picture>
-              <picture>
+              <picture data-aos="fade-down">
                 <source srcset="./img/destope/destope-best2@1x.webp 1x, ./img/destope/destope-best2@2x.webp 2x" media="(min-width:1200px)">
                 <source srcset="./img/tablet/tablet-best2@1x.webp 1x, ./img/tablet/tablet-best2@2x.webp 2x" media="(min-width:720px)">
             <img class="best__img" src="./img/cut.jpg" alt="" />
@@ -124,7 +125,7 @@
         <div class="container">
           <p class="service__write">Spend your time with the best masters</p>
           <h2 class="service__title">Services and prices</h2>
-          <ul class="service__items">
+          <ul data-aos="fade-up" class="service__items">
             <li class="service__elem">
               <ul class="service__list">
                 <li class="service__inhold">
@@ -192,7 +193,6 @@
             <li class="people__item">
               <h3 class="people__subtitle">100</h3>
                 <p class="people__paragrf">Gifts for regular customers</p>
-              </h3>
             </li>
           </ul>
         </div>
@@ -201,13 +201,13 @@
         <div class="container">
           <p class="barbers__text">For true enjoyers of the atmosphere</p>
           <h2 class="barbers__title">Our barbers</h2>
-          <ul class="barbers__list">
+          <ul data-aos="fade-up" class="barbers__list">
             <li class="barbers__item">
               <picture>
                 <source srcset="./img/destope/destope-barbers1@1x.webp 1x, ./img/destope/destope-barbers1@2x.webp 2x" media="(min-width:1200px)">
                 <source srcset="./img/tablet/tablet-barbers1@1x.webp 1x, ./img/tablet/tablet-barbers1@2x.webp 2x" media="(min-width:720px)">
-                <source src="./img/mobile/mobile-barbers1@1x.webp 1x, ./img/mobile/mobile-barbers1@2x.webp 2x" media="(max-width:719px)">
-              <img src="./img/john.jpg" alt="" class="barbers__img">
+                <source srcset="./img/mobile/mobile-barbers1@1x.webp 1x, ./img/mobile/mobile-barbers1@2x.webp 2x" media="(max-width:719px)">
+              <img srcset="./img/john.jpg" alt="" class="barbers__img">
               </picture>
               <h3 class="barbers__name">John Smith</h3>
               <p class="barbers__worker">Extreme Barber</p>
@@ -284,9 +284,9 @@
             </li>
             <li class="barbers__item">
               <picture>
-                <source src="./img/destope/destope-barbers3@1x.webp 1x, ./img/destope/destope-barbers3@2x.webp 2x" media="(min-width:1200px)">
-                <source src="./img/tablet/tablet-barbers3@1x.webp 1x, ./img/tablet/tablet-barbers3@2x.webp 2x" media="(min-width:720px)">
-                <source src="./img/mobile/mobile-barbers3@1x.webp 1x, ./img/mobile/mobile-barbers3@2x.webp 2x">
+                <source srcset="./img/destope/destope-barbers3@1x.webp 1x, ./img/destope/destope-barbers3@2x.webp 2x" media="(min-width:1200px)">
+                <source srcset="./img/tablet/tablet-barbers3@1x.webp 1x, ./img/tablet/tablet-barbers3@2x.webp 2x" media="(min-width:720px)">
+                <source srcset="./img/mobile/mobile-barbers3@1x.webp 1x, ./img/mobile/mobile-barbers3@2x.webp 2x">
               <img src="./img/alan.jpg" alt="" class="barbers__img">
               </picture>
               <h3 class="barbers__name">Alan Black</h3>
@@ -321,14 +321,15 @@
                   </a>
                 </li>
               </ul>
-            </li>
+              </li>
+              </ul>
         </div>
       </section>
       <section class="photos">
         <div class="container">
           <p class="photos__text">In Latin, "barba" means "beard"</p>
           <div>
-          <ul class="photos__list">
+          <ul data-aos="fade-down" class="photos__list">
             <li class="photos__item">
               <picture>
                 <source srcset="./img/destope/destope-photos@1x.webp 1x, ./img/destope/destope-photos@2x.webp 2x" media="(min-width:1200px)">
@@ -362,6 +363,7 @@
               </picture>
             </li>
           </ul>
+        </div>
         </div>
       </section>
       <section class="footer">
@@ -413,7 +415,6 @@
           </div>
         </div>
         </div>
-        </div>
       </section>
     </main>
     <footer class="basement">
@@ -451,5 +452,9 @@
       </div>
     </div>
     <script type="module" src="./js/menu.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init();
+</script>
   </body>
 </html>
